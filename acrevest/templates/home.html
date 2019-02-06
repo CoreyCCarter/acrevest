@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Properties</h3>
+	<div class="container">
+		<div class="row">
+			{% for property in properties.items %}
+			<div class="col-md-4">
+				<div class="property-img">
+					<img src="../static/bg-main.jpg">
+				</div>
+				<div class="property-detail">
+					<span>Property Number:{{ property.id }}</span><br/>
+					<span>Size:{{ property.size }}</span><br/>
+					<span>City:{{ property.city }}</span><br/>
+					<span>County:{{ property.county }}</span><br/>
+					<span>State:{{ property.state }}</span><br/>
+					<span>Postal Code:{{ property.postal_code }}</span><br/>
+					<span>Country:{{ property.country }}</span><br/>
+					<span>Description:{{ property.description }}</span><br/>
+					<span>Date Listed:{{ property.date_listed.strftime('%m-%d-%Y') }}</span><br/>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+			
+			{% endblock content %}
+	
+
+
+

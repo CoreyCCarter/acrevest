@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+	<form method="POST" action="">
+		{{ form.hidden_tag() }}
+		<fieldset class="form-group">
+			<legend class="border-bottom mb-4">{{ legend }}</legend>
+			<div class="form-group">
+				{{ form.size.label(class="form-control-label") }}
+				{% if form.size.errors %}
+					{{ form.size(class="form-control form-control-lg is-invalid") }}
+					<div class="invalid-feedback">
+						{% for error in form.size.errors %}
+							<span>{{ error }}</span>
+						{% endfor %}
+					</div>
+				{% else %}
+					{{ form.size(class="form-control form-control-lg")}}
+				{% endif %}
+			</div>
+			<div class="form-group">
+				{{ form.city.label(class="form-control-label") }}
+				
+				{% if form.city.errors %}
+					{{ form.city(class="form-control form-control-lg is-invalid") }}
+					<div class="invalid-feedback">
+						{% for error in form.city.errors %}
+							<span>{{ error }}</span>
+						{% endfor %}
+					</div>
+				{% else %}
+					{{ form.city(class="form-control form-control-lg")}}
+				{% endif %}
+			</div>
+			<div class="form-group">
+				{{ form.county.label(class="form-control-label") }}
+				
+				{% if form.county.errors %}
+					{{ form.county(class="form-control form-control-lg is-invalid") }}
+					<div class="invalid-feedback">
+						{% for error in form.county.errors %}
+							<span>{{ error }}</span>
+						{% endfor %}
+					</div>
+				{% else %}
+					{{ form.county(class="form-control form-control-lg")}}
+				{% endif %}
+			</div>
+			<div class="form-group">
+				{{ form.state.label(class="form-control-label") }}
+				
+				{% if form.state.errors %}
+					{{ form.state(class="form-control form-control-lg is-invalid") }}
+					<div class="invalid-feedback">
+						{% for error in form.state.errors %}
+							<span>{{ error }}</span>
+						{% endfor %}
+					</div>
+				{% else %}
+					{{ form.state(class="form-control form-control-lg")}}
+				{% endif %}
+			</div>
+			<div class="form-group">
+				{{ form.postal_code.label(class="form-control-label") }}
+				
+				{% if form.postal_code.errors %}
+					{{ form.postal_code(class="form-control form-control-lg is-invalid") }}
+					<div class="invalid-feedback">
+						{% for error in form.postal_code.errors %}
+							<span>{{ error }}</span>
+						{% endfor %}
+					</div>
+				{% else %}
+					{{ form.postal_code(class="form-control form-control-lg")}}
+				{% endif %}
+			</div>
+			<div class="form-group">
+				{{ form.country.label(class="form-control-label") }}
+				
+				{% if form.country.errors %}
+					{{ form.country(class="form-control form-control-lg is-invalid") }}
+					<div class="invalid-feedback">
+						{% for error in form.country.errors %}
+							<span>{{ error }}</span>
+						{% endfor %}
+					</div>
+				{% else %}
+					{{ form.country(class="form-control form-control-lg")}}
+				{% endif %}
+			</div>
+			<div class="form-group">
+				{{ form.description.label(class="form-control-label") }}
+				
+				{% if form.description.errors %}
+					{{ form.description(class="form-control form-control-lg is-invalid") }}
+					<div class="invalid-feedback">
+						{% for error in form.description.errors %}
+							<span>{{ error }}</span>
+						{% endfor %}
+					</div>
+				{% else %}
+					{{ form.description(class="form-control form-control-lg")}}
+				{% endif %}
+			</div>
+		</fieldset>
+		<div class="form-group">
+			{{ form.submit(class="btn btn-outline-info") }}
+		</div>
+	</form>
+</div>
+{% endblock content %}
